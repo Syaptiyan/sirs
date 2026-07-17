@@ -1,0 +1,49 @@
+<?php
+
+namespace App\Database\Migrations;
+
+use CodeIgniter\Database\Migration;
+
+class CreateCitiesTable extends Migration
+{
+    public function up()
+    {
+        $this->forge->addField([
+            'id' => [
+                'type' => 'INT',
+                'auto_increment' => true,
+            ],
+            'uuid' => [
+                'type'   => 'CHAR',
+                'size'   => 36,
+                'unique' => true,
+            ],
+            'province_id' => [
+                'type' => 'INT',
+            ],
+            'name' => [
+                'type'       => 'VARCHAR',
+                'constraint' => 100,
+            ],
+            'created_at' => [
+                'type' => 'DATETIME',
+                'null' => true,
+            ],
+            'updated_at' => [
+                'type' => 'DATETIME',
+                'null' => true,
+            ],
+        ]);
+
+        $this->forge->addKey('id', true);
+        $this->forge->addForeignKey('province_id', 'provinces', 'id');
+        $this->forge->addKey('province_id');
+        $this->forge->addKey('name');
+        $this->forge->createTable('cities');
+    }
+
+    public function down()
+    {
+        $this->forge->dropTable('cities');
+    }
+}

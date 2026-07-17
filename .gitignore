@@ -1,0 +1,42 @@
+# Dependencies
+/vendor/
+node_modules/
+
+# Environment
+.env
+.env.local
+.env.production
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build
+public/build/
+
+# Writable
+writable/cache/
+writable/debugbar/
+writable/logs/
+writable/session/
+writable/uploads/
+
+# Docker
+docker/nginx/ssl/*.pem
+docker/nginx/ssl/*.key
+
+# Backups
+backups/
+
+# Tests
+.phpunit.result.cache
+
+# Misc
+*.log
+*.tmp
