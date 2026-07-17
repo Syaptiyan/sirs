@@ -14,8 +14,8 @@ use CodeIgniter\Config\BaseConfig;
 
 class Cache extends BaseConfig
 {
-    public string $handler = 'file';
-    public string $backupHandler = 'dummy';
+    public string $handler = 'redis';
+    public string $backupHandler = 'file';
     public string $prefix = '';
     public int $ttl = 60;
     public string $reservedCharacters = '{}()/\@:';
@@ -30,7 +30,7 @@ class Cache extends BaseConfig
         'raw'    => false,
     ];
     public array $redis = [
-        'host'       => '127.0.0.1',
+        'host'       => 'redis',
         'password'   => null,
         'port'       => 6379,
         'timeout'    => 0,

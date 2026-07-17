@@ -8,6 +8,10 @@ class CreateUsersTable extends Migration
 {
     public function up()
     {
+        $this->db->disableForeignKeyChecks();
+
+        $this->forge->dropTable('users', true);
+
         $this->forge->addField([
             'id' => [
                 'type' => 'INT',
@@ -81,10 +85,14 @@ class CreateUsersTable extends Migration
         $this->forge->addKey('email');
         $this->forge->addKey('is_active');
         $this->forge->createTable('users');
+
+        $this->db->enableForeignKeyChecks();
     }
 
     public function down()
     {
-        $this->forge->dropTable('users');
+        $this->db->disableForeignKeyChecks();
+        $this->forge->dropTable('users', true);
+        $this->db->enableForeignKeyChecks();
     }
 }

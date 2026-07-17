@@ -19,14 +19,12 @@ use CodeIgniter\Config\BaseService;
  */
 class Services extends BaseService
 {
-    /*
-     * public static function example($getShared = true)
-     * {
-     *     if ($getShared) {
-     *         return static::getSharedInstance('example');
-     *     }
-     *
-     *     return new \CodeIgniter\Example();
-     * }
-     */
+    public static function uuid($getShared = true): \App\Libraries\Uuid
+    {
+        if ($getShared) {
+            return static::getSharedInstance('uuid');
+        }
+
+        return new \App\Libraries\Uuid();
+    }
 }

@@ -47,11 +47,10 @@ class CreateSettingsTable extends Migration
 
         $this->forge->addKey('id', true);
         $this->forge->addKey('group');
-        $this->forge->createTable('settings');
+        $this->forge->createTable('settings', true);
     }
 
     public function down()
     {
-        $this->forge->dropTable('settings');
     }
 }

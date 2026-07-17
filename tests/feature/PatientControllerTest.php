@@ -13,6 +13,10 @@ class PatientControllerTest extends CIUnitTestCase
     use DatabaseTestTrait;
     use FeatureTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private PatientModel $patientModel;
     private UserModel $userModel;
 

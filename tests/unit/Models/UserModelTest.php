@@ -10,6 +10,10 @@ class UserModelTest extends CIUnitTestCase
 {
     use DatabaseTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private UserModel $userModel;
 
     protected function setUp(): void

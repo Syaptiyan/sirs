@@ -34,10 +34,11 @@ class Filters extends BaseFilters
         'forcehttps'    => ForceHTTPS::class,
         'pagecache'     => PageCache::class,
         'performance'   => PerformanceMetrics::class,
-        'auth'          => \App\Filters\AuthMiddleware::class,
-        'rbac'          => \App\Filters\RBACMiddleware::class,
-        'csrf_custom'   => \App\Filters\CSRFMiddleware::class,
-        'throttle'      => \App\Filters\ThrottleMiddleware::class,
+        'auth'            => \App\Filters\AuthMiddleware::class,
+        'rbac'            => \App\Filters\RBACMiddleware::class,
+        'csrf_custom'     => \App\Filters\CSRFMiddleware::class,
+        'throttle'        => \App\Filters\ThrottleMiddleware::class,
+        'security_headers' => \App\Filters\SecurityHeadersMiddleware::class,
     ];
 
     /**
@@ -76,13 +77,14 @@ class Filters extends BaseFilters
      */
     public array $globals = [
         'before' => [
-            // 'honeypot',
-            // 'csrf',
-            // 'invalidchars',
+            'honeypot',
+            'csrf',
+            'invalidchars',
+            'security_headers',
         ],
         'after' => [
-            // 'honeypot',
-            // 'secureheaders',
+            'honeypot',
+            'security_headers',
         ],
     ];
 

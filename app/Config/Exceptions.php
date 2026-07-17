@@ -56,7 +56,20 @@ class Exceptions extends BaseConfig
      *
      * @var list<string>
      */
-    public array $sensitiveDataInTrace = [];
+    public array $sensitiveDataInTrace = [
+        'password',
+        'password_confirm',
+        'token',
+        'csrf_test_name',
+        'secret',
+        'api_key',
+        'authorization',
+        'credit_card',
+        'cvv',
+        'ssn',
+        'encryption.key',
+        'database.default.password',
+    ];
 
     /**
      * --------------------------------------------------------------------------

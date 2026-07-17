@@ -15,6 +15,10 @@ class PatientServiceTest extends CIUnitTestCase
 {
     use DatabaseTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private PatientService $patientService;
     private PatientModel $patientModel;
 

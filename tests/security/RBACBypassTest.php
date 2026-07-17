@@ -12,6 +12,10 @@ class RBACBypassTest extends CIUnitTestCase
     use DatabaseTestTrait;
     use FeatureTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private UserModel $userModel;
 
     protected function setUp(): void

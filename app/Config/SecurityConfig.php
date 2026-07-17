@@ -105,7 +105,7 @@ class SecurityConfig extends BaseConfig
      * Key used for AES-256 encryption.
      * Should be 32 bytes for AES-256.
      */
-    public string $encryptionKey = '';
+    public string $encryptionKey = '14f10a5e2d3ea0ed50e569967f6cbc9b9512eb09bbdf6c6c6b3ac60b4fd2cbb1';
 
     /**
      * --------------------------------------------------------------------------

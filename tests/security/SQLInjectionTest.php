@@ -15,6 +15,10 @@ class SQLInjectionTest extends CIUnitTestCase
     use DatabaseTestTrait;
     use FeatureTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private UserModel $userModel;
     private PatientModel $patientModel;
 

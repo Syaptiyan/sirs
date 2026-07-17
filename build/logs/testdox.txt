@@ -1,0 +1,212 @@
+Auth Bypass (Tests\Security\AuthBypass)
+ [x] Cannot access protected route without login
+ [x] Cannot bypass auth with fake session
+ [x] Cannot bypass auth with manipulated cookie
+ [ ] Inactive user cannot login
+ [ ] Cannot reuse expired token
+
+Auth Controller (Tests\Feature\AuthController)
+ [x] Login page renders
+ [x] Register page renders
+ [ ] Login with valid credentials
+ [ ] Login with invalid credentials
+ [ ] Login with non existent email
+ [ ] Login validation requires email
+ [ ] Login validation requires password
+ [ ] Login validation requires valid email
+ [ ] Register success
+ [ ] Register validation requires name
+ [ ] Register validation requires email
+ [ ] Register validation requires password match
+ [ ] Register validation requires min password length
+ [ ] Register with duplicate email
+ [x] Logout
+ [x] Forgot password page renders
+ [ ] Forgot password with valid email
+ [ ] Forgot password with non existent email
+ [ ] Forgot password validation requires email
+ [x] Reset password page renders
+ [ ] Reset password with valid token
+ [ ] Reset password with invalid token
+ [ ] Reset password validation requires token
+ [ ] Reset password validation requires password match
+
+Auth Service (Tests\Unit\Services\AuthService)
+ [ ] Login with valid credentials
+ [ ] Login with invalid password
+ [ ] Login with non existent email
+ [ ] Login with inactive user
+ [ ] Register success
+ [ ] Register with duplicate email
+ [ ] Verify email success
+ [ ] Verify email with invalid token
+ [ ] Forgot password success
+ [ ] Forgot password with non existent email
+ [ ] Reset password success
+ [ ] Reset password with invalid token
+ [ ] Has permission
+ [ ] Has role
+
+Billing Service (Tests\Unit\Services\BillingService)
+ [x] Can be instantiated
+
+CSRF (Tests\Security\CSRF)
+ [x] C s r f protection is configured
+ [x] C s r f token name is configured
+ [x] C s r f header name is configured
+ [x] C s r f cookie name is configured
+ [x] C s r f token expiration is set
+ [x] C s r f regenerate is enabled
+ [x] C s r f protection method is cookie
+ [ ] Login without c s r f token fails
+ [ ] Register without c s r f token fails
+ [ ] Patient store without c s r f token fails
+ [ ] C s r f token is generated
+ [ ] C s r f token regeneration
+ [x] C s r f protection is registered as filter
+ [x] C s r f middleware is registered
+ [x] Security headers middleware is registered
+ [ ] C s r f token can be validated
+ [ ] C s r f protection for p o s t requests
+ [x] C s r f protection for p u t requests
+ [x] C s r f protection for d e l e t e requests
+ [x] C s r f redirect on failure in production
+ [ ] C s r f token format
+ [x] C s r f protection against replay attack
+ [ ] C s r f protection against token fixation
+ [x] C s r f cookie attributes
+ [x] C s r f protection is enabled by default
+ [ ] Multiple c s r f token generations are unique
+
+Doctor Service (Tests\Unit\Services\DoctorService)
+ [x] Can be instantiated
+
+Example Database
+ [x] Model find all
+ [x] Soft delete leaves row
+
+Example Session
+ [x] Session simple
+
+Health
+ [x] Is defined app path
+ [x] Base url has been set
+
+Lab Service (Tests\Unit\Services\LabService)
+ [x] Can be instantiated
+
+Medical Record Service (Tests\Unit\Services\MedicalRecordService)
+ [x] Can be instantiated
+
+Patient Controller (Tests\Feature\PatientController)
+ [ ] Index page renders
+ [ ] Index returns json for api request
+ [ ] Index with search filter
+ [ ] Index with gender filter
+ [ ] Index with pagination
+ [ ] Create page renders
+ [ ] Store success
+ [ ] Store validation fails
+ [ ] Store validation requires name
+ [ ] Store validation requires gender
+ [ ] Store validation requires valid gender
+ [ ] Show returns patient
+ [ ] Show returns 404 for non existent
+ [ ] Edit page renders
+ [ ] Update success
+ [ ] Update validation fails
+ [ ] Update non existent patient
+ [ ] Delete success
+ [ ] Delete non existent patient
+ [ ] Visits endpoint
+ [ ] Allergies endpoint
+ [ ] Store allergy success
+ [ ] Store allergy validation fails
+ [ ] Chronic diseases endpoint
+ [ ] Store chronic disease success
+ [ ] Documents endpoint
+ [ ] Export endpoint
+
+Patient Service (Tests\Unit\Services\PatientService)
+ [ ] Get all returns patients
+ [ ] Get all with search filter
+ [ ] Get all with gender filter
+ [ ] Get all with pagination
+ [ ] Get by uuid returns patient
+ [ ] Get by uuid returns null for non existent
+ [ ] Create patient success
+ [ ] Create patient generates unique m r n
+ [ ] Update patient success
+ [ ] Update non existent patient returns false
+ [ ] Delete patient success
+ [ ] Delete non existent patient returns false
+ [ ] Get allergies returns empty for non existent patient
+ [ ] Add allergy success
+ [ ] Add allergy to non existent patient returns null
+ [ ] Remove allergy success
+ [ ] Remove non existent allergy returns false
+ [ ] Get chronic diseases returns empty for non existent patient
+ [ ] Add chronic disease success
+ [ ] Get documents returns empty for non existent patient
+ [ ] Add document success
+ [ ] Get visits returns empty for non existent patient
+ [ ] Generate m r n format
+ [ ] Export returns csv string
+
+Payment Service (Tests\Unit\Services\PaymentService)
+ [x] Can be instantiated
+
+Pharmacy Service (Tests\Unit\Services\PharmacyService)
+ [x] Can be instantiated
+
+Prescription Service (Tests\Unit\Services\PrescriptionService)
+ [x] Can be instantiated
+
+Queue Service (Tests\Unit\Services\QueueService)
+ [x] Can be instantiated
+
+RBACBypass (Tests\Security\RBACBypass)
+ [ ] User cannot access admin route
+ [ ] User cannot elevate privileges via request
+ [ ] User cannot access without specific permission
+ [ ] Cannot bypass r b a c via direct u r l manipulation
+ [ ] Cannot bypass r b a c via h t t p method spoofing
+
+Registration Service (Tests\Unit\Services\RegistrationService)
+ [x] Can be instantiated
+
+SQLInjection (Tests\Security\SQLInjection)
+ [ ] Login s q l injection attempt
+ [ ] Login s q l injection in password
+ [ ] Patient search s q l injection
+ [ ] Patient create s q l injection
+ [ ] Email verification token s q l injection
+ [ ] Password reset token s q l injection
+ [ ] Login endpoint s q l injection via h t t p
+ [ ] Patient search endpoint s q l injection via h t t p
+ [ ] Patient update s q l injection via h t t p
+ [ ] No s q l injection via order by
+ [ ] No s q l injection via gender filter
+ [ ] No s q l injection via pagination
+
+Schedule Service (Tests\Unit\Services\ScheduleService)
+ [x] Can be instantiated
+
+User Model (Tests\Unit\Models\UserModel)
+ [ ] Insert user success
+ [ ] Insert generates u u i d
+ [ ] Validation requires name
+ [x] Validation requires valid email
+ [ ] Validation requires min password length
+ [ ] Find user by id
+ [ ] Find user by email
+ [ ] Update user
+ [ ] Soft delete
+ [ ] Timestamps are set
+ [x] Allowed fields
+ [x] Return type is object
+ [x] Table name
+ [x] Soft deletes enabled
+ [ ] Find all users
+ [ ] Where clause filtering
+

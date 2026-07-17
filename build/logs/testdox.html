@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <title>Test Documentation</title>
+        <style>
+            body {
+                text-rendering: optimizeLegibility;
+                font-family: Source SansSerif Pro, Arial, sans-serif;
+                font-variant-ligatures: common-ligatures;
+                font-kerning: normal;
+                margin-left: 2rem;
+                background-color: #fff;
+                color: #000;
+            }
+
+            body > ul > li {
+                font-size: larger;
+            }
+
+            h2 {
+                font-size: larger;
+                text-decoration-line: underline;
+                text-decoration-thickness: 2px;
+                margin: 0;
+                padding: 0.5rem 0;
+            }
+
+            ul {
+                list-style: none;
+                margin: 0 0 2rem;
+                padding: 0 0 0 1rem;
+                text-indent: -1rem;
+            }
+
+            .success:before {
+                color: #4e9a06;
+                content: '✓';
+                padding-right: 0.5rem;
+            }
+
+            .defect {
+                color: #a40000;
+            }
+
+            .defect:before {
+                color: #a40000;
+                content: '✗';
+                padding-right: 0.5rem;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Auth Bypass (Tests\Security\AuthBypass)</h2>
+        <ul>
+            <li class="success">Cannot access protected route without login</li>
+            <li class="success">Cannot bypass auth with fake session</li>
+            <li class="success">Cannot bypass auth with manipulated cookie</li>
+            <li class="defect">Inactive user cannot login</li>
+            <li class="defect">Cannot reuse expired token</li>
+        </ul>
+        <h2>Auth Controller (Tests\Feature\AuthController)</h2>
+        <ul>
+            <li class="success">Login page renders</li>
+            <li class="success">Register page renders</li>
+            <li class="defect">Login with valid credentials</li>
+            <li class="defect">Login with invalid credentials</li>
+            <li class="defect">Login with non existent email</li>
+            <li class="defect">Login validation requires email</li>
+            <li class="defect">Login validation requires password</li>
+            <li class="defect">Login validation requires valid email</li>
+            <li class="defect">Register success</li>
+            <li class="defect">Register validation requires name</li>
+            <li class="defect">Register validation requires email</li>
+            <li class="defect">Register validation requires password match</li>
+            <li class="defect">Register validation requires min password length</li>
+            <li class="defect">Register with duplicate email</li>
+            <li class="success">Logout</li>
+            <li class="success">Forgot password page renders</li>
+            <li class="defect">Forgot password with valid email</li>
+            <li class="defect">Forgot password with non existent email</li>
+            <li class="defect">Forgot password validation requires email</li>
+            <li class="success">Reset password page renders</li>
+            <li class="defect">Reset password with valid token</li>
+            <li class="defect">Reset password with invalid token</li>
+            <li class="defect">Reset password validation requires token</li>
+            <li class="defect">Reset password validation requires password match</li>
+        </ul>
+        <h2>Auth Service (Tests\Unit\Services\AuthService)</h2>
+        <ul>
+            <li class="defect">Login with valid credentials</li>
+            <li class="defect">Login with invalid password</li>
+            <li class="defect">Login with non existent email</li>
+            <li class="defect">Login with inactive user</li>
+            <li class="defect">Register success</li>
+            <li class="defect">Register with duplicate email</li>
+            <li class="defect">Verify email success</li>
+            <li class="defect">Verify email with invalid token</li>
+            <li class="defect">Forgot password success</li>
+            <li class="defect">Forgot password with non existent email</li>
+            <li class="defect">Reset password success</li>
+            <li class="defect">Reset password with invalid token</li>
+            <li class="defect">Has permission</li>
+            <li class="defect">Has role</li>
+        </ul>
+        <h2>Billing Service (Tests\Unit\Services\BillingService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>CSRF (Tests\Security\CSRF)</h2>
+        <ul>
+            <li class="success">C s r f protection is configured</li>
+            <li class="success">C s r f token name is configured</li>
+            <li class="success">C s r f header name is configured</li>
+            <li class="success">C s r f cookie name is configured</li>
+            <li class="success">C s r f token expiration is set</li>
+            <li class="success">C s r f regenerate is enabled</li>
+            <li class="success">C s r f protection method is cookie</li>
+            <li class="defect">Login without c s r f token fails</li>
+            <li class="defect">Register without c s r f token fails</li>
+            <li class="defect">Patient store without c s r f token fails</li>
+            <li class="defect">C s r f token is generated</li>
+            <li class="defect">C s r f token regeneration</li>
+            <li class="success">C s r f protection is registered as filter</li>
+            <li class="success">C s r f middleware is registered</li>
+            <li class="success">Security headers middleware is registered</li>
+            <li class="defect">C s r f token can be validated</li>
+            <li class="defect">C s r f protection for p o s t requests</li>
+            <li class="success">C s r f protection for p u t requests</li>
+            <li class="success">C s r f protection for d e l e t e requests</li>
+            <li class="success">C s r f redirect on failure in production</li>
+            <li class="defect">C s r f token format</li>
+            <li class="success">C s r f protection against replay attack</li>
+            <li class="defect">C s r f protection against token fixation</li>
+            <li class="success">C s r f cookie attributes</li>
+            <li class="success">C s r f protection is enabled by default</li>
+            <li class="defect">Multiple c s r f token generations are unique</li>
+        </ul>
+        <h2>Doctor Service (Tests\Unit\Services\DoctorService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Example Database</h2>
+        <ul>
+            <li class="success">Model find all</li>
+            <li class="success">Soft delete leaves row</li>
+        </ul>
+        <h2>Example Session</h2>
+        <ul>
+            <li class="success">Session simple</li>
+        </ul>
+        <h2>Health</h2>
+        <ul>
+            <li class="success">Is defined app path</li>
+            <li class="success">Base url has been set</li>
+        </ul>
+        <h2>Lab Service (Tests\Unit\Services\LabService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Medical Record Service (Tests\Unit\Services\MedicalRecordService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Patient Controller (Tests\Feature\PatientController)</h2>
+        <ul>
+            <li class="defect">Index page renders</li>
+            <li class="defect">Index returns json for api request</li>
+            <li class="defect">Index with search filter</li>
+            <li class="defect">Index with gender filter</li>
+            <li class="defect">Index with pagination</li>
+            <li class="defect">Create page renders</li>
+            <li class="defect">Store success</li>
+            <li class="defect">Store validation fails</li>
+            <li class="defect">Store validation requires name</li>
+            <li class="defect">Store validation requires gender</li>
+            <li class="defect">Store validation requires valid gender</li>
+            <li class="defect">Show returns patient</li>
+            <li class="defect">Show returns 404 for non existent</li>
+            <li class="defect">Edit page renders</li>
+            <li class="defect">Update success</li>
+            <li class="defect">Update validation fails</li>
+            <li class="defect">Update non existent patient</li>
+            <li class="defect">Delete success</li>
+            <li class="defect">Delete non existent patient</li>
+            <li class="defect">Visits endpoint</li>
+            <li class="defect">Allergies endpoint</li>
+            <li class="defect">Store allergy success</li>
+            <li class="defect">Store allergy validation fails</li>
+            <li class="defect">Chronic diseases endpoint</li>
+            <li class="defect">Store chronic disease success</li>
+            <li class="defect">Documents endpoint</li>
+            <li class="defect">Export endpoint</li>
+        </ul>
+        <h2>Patient Service (Tests\Unit\Services\PatientService)</h2>
+        <ul>
+            <li class="defect">Get all returns patients</li>
+            <li class="defect">Get all with search filter</li>
+            <li class="defect">Get all with gender filter</li>
+            <li class="defect">Get all with pagination</li>
+            <li class="defect">Get by uuid returns patient</li>
+            <li class="defect">Get by uuid returns null for non existent</li>
+            <li class="defect">Create patient success</li>
+            <li class="defect">Create patient generates unique m r n</li>
+            <li class="defect">Update patient success</li>
+            <li class="defect">Update non existent patient returns false</li>
+            <li class="defect">Delete patient success</li>
+            <li class="defect">Delete non existent patient returns false</li>
+            <li class="defect">Get allergies returns empty for non existent patient</li>
+            <li class="defect">Add allergy success</li>
+            <li class="defect">Add allergy to non existent patient returns null</li>
+            <li class="defect">Remove allergy success</li>
+            <li class="defect">Remove non existent allergy returns false</li>
+            <li class="defect">Get chronic diseases returns empty for non existent patient</li>
+            <li class="defect">Add chronic disease success</li>
+            <li class="defect">Get documents returns empty for non existent patient</li>
+            <li class="defect">Add document success</li>
+            <li class="defect">Get visits returns empty for non existent patient</li>
+            <li class="defect">Generate m r n format</li>
+            <li class="defect">Export returns csv string</li>
+        </ul>
+        <h2>Payment Service (Tests\Unit\Services\PaymentService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Pharmacy Service (Tests\Unit\Services\PharmacyService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Prescription Service (Tests\Unit\Services\PrescriptionService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>Queue Service (Tests\Unit\Services\QueueService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>RBACBypass (Tests\Security\RBACBypass)</h2>
+        <ul>
+            <li class="defect">User cannot access admin route</li>
+            <li class="defect">User cannot elevate privileges via request</li>
+            <li class="defect">User cannot access without specific permission</li>
+            <li class="defect">Cannot bypass r b a c via direct u r l manipulation</li>
+            <li class="defect">Cannot bypass r b a c via h t t p method spoofing</li>
+        </ul>
+        <h2>Registration Service (Tests\Unit\Services\RegistrationService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>SQLInjection (Tests\Security\SQLInjection)</h2>
+        <ul>
+            <li class="defect">Login s q l injection attempt</li>
+            <li class="defect">Login s q l injection in password</li>
+            <li class="defect">Patient search s q l injection</li>
+            <li class="defect">Patient create s q l injection</li>
+            <li class="defect">Email verification token s q l injection</li>
+            <li class="defect">Password reset token s q l injection</li>
+            <li class="defect">Login endpoint s q l injection via h t t p</li>
+            <li class="defect">Patient search endpoint s q l injection via h t t p</li>
+            <li class="defect">Patient update s q l injection via h t t p</li>
+            <li class="defect">No s q l injection via order by</li>
+            <li class="defect">No s q l injection via gender filter</li>
+            <li class="defect">No s q l injection via pagination</li>
+        </ul>
+        <h2>Schedule Service (Tests\Unit\Services\ScheduleService)</h2>
+        <ul>
+            <li class="success">Can be instantiated</li>
+        </ul>
+        <h2>User Model (Tests\Unit\Models\UserModel)</h2>
+        <ul>
+            <li class="defect">Insert user success</li>
+            <li class="defect">Insert generates u u i d</li>
+            <li class="defect">Validation requires name</li>
+            <li class="success">Validation requires valid email</li>
+            <li class="defect">Validation requires min password length</li>
+            <li class="defect">Find user by id</li>
+            <li class="defect">Find user by email</li>
+            <li class="defect">Update user</li>
+            <li class="defect">Soft delete</li>
+            <li class="defect">Timestamps are set</li>
+            <li class="success">Allowed fields</li>
+            <li class="success">Return type is object</li>
+            <li class="success">Table name</li>
+            <li class="success">Soft deletes enabled</li>
+            <li class="defect">Find all users</li>
+            <li class="defect">Where clause filtering</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,1751 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="C:\de\sirs\phpunit.dist.xml" tests="168" assertions="58" errors="124" failures="0" skipped="0" time="32.433215">
+    <testsuite name="App" tests="168" assertions="58" errors="124" failures="0" skipped="0" time="32.433215">
+      <testsuite name="ExampleDatabaseTest" file="C:\de\sirs\tests\database\ExampleDatabaseTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.320673">
+        <testcase name="testModelFindAll" file="C:\de\sirs\tests\database\ExampleDatabaseTest.php" line="17" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="1" time="0.243347"/>
+        <testcase name="testSoftDeleteLeavesRow" file="C:\de\sirs\tests\database\ExampleDatabaseTest.php" line="28" class="ExampleDatabaseTest" classname="ExampleDatabaseTest" assertions="2" time="0.077326"/>
+      </testsuite>
+      <testsuite name="Tests\Feature\AuthControllerTest" file="C:\de\sirs\tests\feature\AuthControllerTest.php" tests="24" assertions="7" errors="19" failures="0" skipped="0" time="3.073870">
+        <testcase name="testLoginPageRenders" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="31" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="1" time="0.099525"/>
+        <testcase name="testRegisterPageRenders" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="38" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="1" time="0.028806"/>
+        <testcase name="testLoginWithValidCredentials" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="45" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.534733">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testLoginWithValidCredentials&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:50</error>
+        </testcase>
+        <testcase name="testLoginWithInvalidCredentials" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="65" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.499584">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testLoginWithInvalidCredentials&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:69</error>
+        </testcase>
+        <testcase name="testLoginWithNonExistentEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="85" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.026894">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testLoginWithNonExistentEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:87</error>
+        </testcase>
+        <testcase name="testLoginValidationRequiresEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="96" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.023740">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testLoginValidationRequiresEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:98</error>
+        </testcase>
+        <testcase name="testLoginValidationRequiresPassword" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="106" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.019654">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testLoginValidationRequiresPassword&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:108</error>
+        </testcase>
+        <testcase name="testLoginValidationRequiresValidEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="116" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.021179">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testLoginValidationRequiresValidEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:118</error>
+        </testcase>
+        <testcase name="testRegisterSuccess" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="127" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.017966">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testRegisterSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_roles
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:129</error>
+        </testcase>
+        <testcase name="testRegisterValidationRequiresName" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="149" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.025793">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testRegisterValidationRequiresName&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:151</error>
+        </testcase>
+        <testcase name="testRegisterValidationRequiresEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="161" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.019548">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testRegisterValidationRequiresEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:163</error>
+        </testcase>
+        <testcase name="testRegisterValidationRequiresPasswordMatch" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="173" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.025814">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testRegisterValidationRequiresPasswordMatch&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:175</error>
+        </testcase>
+        <testcase name="testRegisterValidationRequiresMinPasswordLength" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="186" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.018026">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testRegisterValidationRequiresMinPasswordLength&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:188</error>
+        </testcase>
+        <testcase name="testRegisterWithDuplicateEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="199" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.506601">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testRegisterWithDuplicateEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:201</error>
+        </testcase>
+        <testcase name="testLogout" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="218" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="3" time="0.024899"/>
+        <testcase name="testForgotPasswordPageRenders" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="226" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="1" time="0.024719"/>
+        <testcase name="testForgotPasswordWithValidEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="233" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.504975">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testForgotPasswordWithValidEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:235</error>
+        </testcase>
+        <testcase name="testForgotPasswordWithNonExistentEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="249" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.027349">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testForgotPasswordWithNonExistentEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:251</error>
+        </testcase>
+        <testcase name="testForgotPasswordValidationRequiresEmail" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="259" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.022195">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testForgotPasswordValidationRequiresEmail&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:261</error>
+        </testcase>
+        <testcase name="testResetPasswordPageRenders" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="267" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="1" time="0.026042"/>
+        <testcase name="testResetPasswordWithValidToken" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="274" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.512244">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\AuthControllerTest::testResetPasswordWithValidToken&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\AuthControllerTest.php:276</error>
+        </testcase>
+        <testcase name="testResetPasswordWithInvalidToken" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="300" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.024159">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testResetPasswordWithInvalidToken&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:302</error>
+        </testcase>
+        <testcase name="testResetPasswordValidationRequiresToken" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="312" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.018400">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testResetPasswordValidationRequiresToken&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:314</error>
+        </testcase>
+        <testcase name="testResetPasswordValidationRequiresPasswordMatch" file="C:\de\sirs\tests\feature\AuthControllerTest.php" line="323" class="Tests\Feature\AuthControllerTest" classname="Tests.Feature.AuthControllerTest" assertions="0" time="0.021027">
+          <error type="CodeIgniter\Security\Exceptions\SecurityException">Tests\Feature\AuthControllerTest::testResetPasswordValidationRequiresPasswordMatch&#13;
+CodeIgniter\Security\Exceptions\SecurityException: The action you requested is not allowed.
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Security\Security.php:258
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\CSRF.php:52
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:241
+C:\de\sirs\vendor\codeigniter4\framework\system\Filters\Filters.php:221
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:488
+C:\de\sirs\vendor\codeigniter4\framework\system\CodeIgniter.php:363
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:234
+C:\de\sirs\vendor\codeigniter4\framework\system\Test\FeatureTestTrait.php:267
+C:\de\sirs\tests\feature\AuthControllerTest.php:325</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Feature\PatientControllerTest" file="C:\de\sirs\tests\feature\PatientControllerTest.php" tests="27" assertions="0" errors="27" failures="0" skipped="0" time="13.751302">
+        <testcase name="testIndexPageRenders" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="65" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.503261">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testIndexPageRenders&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:67</error>
+        </testcase>
+        <testcase name="testIndexReturnsJsonForApiRequest" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="74" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.512615">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testIndexReturnsJsonForApiRequest&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:76</error>
+        </testcase>
+        <testcase name="testIndexWithSearchFilter" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="87" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.506027">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testIndexWithSearchFilter&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:89</error>
+        </testcase>
+        <testcase name="testIndexWithGenderFilter" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="102" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.503419">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testIndexWithGenderFilter&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:104</error>
+        </testcase>
+        <testcase name="testIndexWithPagination" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="117" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.506767">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testIndexWithPagination&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:119</error>
+        </testcase>
+        <testcase name="testCreatePageRenders" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="134" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.513281">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testCreatePageRenders&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:136</error>
+        </testcase>
+        <testcase name="testStoreSuccess" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="143" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.510962">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:145</error>
+        </testcase>
+        <testcase name="testStoreValidationFails" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="166" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.512360">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreValidationFails&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:168</error>
+        </testcase>
+        <testcase name="testStoreValidationRequiresName" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="182" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.502402">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreValidationRequiresName&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:184</error>
+        </testcase>
+        <testcase name="testStoreValidationRequiresGender" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="196" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.505439">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreValidationRequiresGender&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:198</error>
+        </testcase>
+        <testcase name="testStoreValidationRequiresValidGender" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="210" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.507699">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreValidationRequiresValidGender&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:212</error>
+        </testcase>
+        <testcase name="testShowReturnsPatient" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="225" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.504159">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testShowReturnsPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:227</error>
+        </testcase>
+        <testcase name="testShowReturns404ForNonExistent" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="239" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.504305">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testShowReturns404ForNonExistent&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:241</error>
+        </testcase>
+        <testcase name="testEditPageRenders" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="251" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.512632">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testEditPageRenders&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:253</error>
+        </testcase>
+        <testcase name="testUpdateSuccess" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="261" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.514496">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testUpdateSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:263</error>
+        </testcase>
+        <testcase name="testUpdateValidationFails" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="283" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.518608">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testUpdateValidationFails&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:285</error>
+        </testcase>
+        <testcase name="testUpdateNonExistentPatient" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="299" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.505412">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testUpdateNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:301</error>
+        </testcase>
+        <testcase name="testDeleteSuccess" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="315" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.511316">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testDeleteSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:317</error>
+        </testcase>
+        <testcase name="testDeleteNonExistentPatient" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="331" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.515553">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testDeleteNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:333</error>
+        </testcase>
+        <testcase name="testVisitsEndpoint" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="343" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.518439">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testVisitsEndpoint&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:345</error>
+        </testcase>
+        <testcase name="testAllergiesEndpoint" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="356" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.516284">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testAllergiesEndpoint&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:358</error>
+        </testcase>
+        <testcase name="testStoreAllergySuccess" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="369" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.514756">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreAllergySuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:371</error>
+        </testcase>
+        <testcase name="testStoreAllergyValidationFails" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="386" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.506224">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreAllergyValidationFails&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:388</error>
+        </testcase>
+        <testcase name="testChronicDiseasesEndpoint" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="402" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.505654">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testChronicDiseasesEndpoint&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:404</error>
+        </testcase>
+        <testcase name="testStoreChronicDiseaseSuccess" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="415" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.501891">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testStoreChronicDiseaseSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:417</error>
+        </testcase>
+        <testcase name="testDocumentsEndpoint" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="432" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.499461">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testDocumentsEndpoint&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:434</error>
+        </testcase>
+        <testcase name="testExportEndpoint" file="C:\de\sirs\tests\feature\PatientControllerTest.php" line="445" class="Tests\Feature\PatientControllerTest" classname="Tests.Feature.PatientControllerTest" assertions="0" time="0.517879">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Feature\PatientControllerTest::testExportEndpoint&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\feature\PatientControllerTest.php:47
+C:\de\sirs\tests\feature\PatientControllerTest.php:447</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Security\AuthBypassTest" file="C:\de\sirs\tests\security\AuthBypassTest.php" tests="5" assertions="3" errors="2" failures="0" skipped="0" time="0.993264">
+        <testcase name="testCannotAccessProtectedRouteWithoutLogin" file="C:\de\sirs\tests\security\AuthBypassTest.php" line="24" class="Tests\Security\AuthBypassTest" classname="Tests.Security.AuthBypassTest" assertions="1" time="0.109222"/>
+        <testcase name="testCannotBypassAuthWithFakeSession" file="C:\de\sirs\tests\security\AuthBypassTest.php" line="31" class="Tests\Security\AuthBypassTest" classname="Tests.Security.AuthBypassTest" assertions="1" time="0.086307"/>
+        <testcase name="testCannotBypassAuthWithManipulatedCookie" file="C:\de\sirs\tests\security\AuthBypassTest.php" line="43" class="Tests\Security\AuthBypassTest" classname="Tests.Security.AuthBypassTest" assertions="1" time="0.099516"/>
+        <testcase name="testInactiveUserCannotLogin" file="C:\de\sirs\tests\security\AuthBypassTest.php" line="52" class="Tests\Security\AuthBypassTest" classname="Tests.Security.AuthBypassTest" assertions="0" time="0.590743">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\AuthBypassTest::testInactiveUserCannotLogin&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\AuthBypassTest.php:54</error>
+        </testcase>
+        <testcase name="testCannotReuseExpiredToken" file="C:\de\sirs\tests\security\AuthBypassTest.php" line="67" class="Tests\Security\AuthBypassTest" classname="Tests.Security.AuthBypassTest" assertions="0" time="0.107476">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\AuthBypassTest::testCannotReuseExpiredToken&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_email_verifications
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:81
+C:\de\sirs\tests\security\AuthBypassTest.php:71</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Security\CSRFTest" file="C:\de\sirs\tests\security\CSRFTest.php" tests="26" assertions="21" errors="10" failures="0" skipped="0" time="2.044160">
+        <testcase name="testCSRFProtectionIsConfigured" file="C:\de\sirs\tests\security\CSRFTest.php" line="20" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="2" time="0.107446"/>
+        <testcase name="testCSRFTokenNameIsConfigured" file="C:\de\sirs\tests\security\CSRFTest.php" line="28" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.087531"/>
+        <testcase name="testCSRFHeaderNameIsConfigured" file="C:\de\sirs\tests\security\CSRFTest.php" line="35" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.078978"/>
+        <testcase name="testCSRFCookieNameIsConfigured" file="C:\de\sirs\tests\security\CSRFTest.php" line="42" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.077477"/>
+        <testcase name="testCSRFTokenExpirationIsSet" file="C:\de\sirs\tests\security\CSRFTest.php" line="49" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.082644"/>
+        <testcase name="testCSRFRegenerateIsEnabled" file="C:\de\sirs\tests\security\CSRFTest.php" line="56" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.075074"/>
+        <testcase name="testCSRFProtectionMethodIsCookie" file="C:\de\sirs\tests\security\CSRFTest.php" line="63" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.086281"/>
+        <testcase name="testLoginWithoutCSRFTokenFails" file="C:\de\sirs\tests\security\CSRFTest.php" line="70" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.088558">
+          <error type="Error">Tests\Security\CSRFTest::testLoginWithoutCSRFTokenFails&#13;
+Error: Call to undefined method Tests\Security\CSRFTest::withoutMiddleware()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:72</error>
+        </testcase>
+        <testcase name="testRegisterWithoutCSRFTokenFails" file="C:\de\sirs\tests\security\CSRFTest.php" line="82" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.076270">
+          <error type="Error">Tests\Security\CSRFTest::testRegisterWithoutCSRFTokenFails&#13;
+Error: Call to undefined method Tests\Security\CSRFTest::withoutMiddleware()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:84</error>
+        </testcase>
+        <testcase name="testPatientStoreWithoutCSRFTokenFails" file="C:\de\sirs\tests\security\CSRFTest.php" line="96" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.071684">
+          <error type="Error">Tests\Security\CSRFTest::testPatientStoreWithoutCSRFTokenFails&#13;
+Error: Call to undefined method Tests\Security\CSRFTest::withoutMiddleware()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:98</error>
+        </testcase>
+        <testcase name="testCSRFTokenIsGenerated" file="C:\de\sirs\tests\security\CSRFTest.php" line="121" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.076582">
+          <error type="Error">Tests\Security\CSRFTest::testCSRFTokenIsGenerated&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:125</error>
+        </testcase>
+        <testcase name="testCSRFTokenRegeneration" file="C:\de\sirs\tests\security\CSRFTest.php" line="131" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.074263">
+          <error type="Error">Tests\Security\CSRFTest::testCSRFTokenRegeneration&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:135</error>
+        </testcase>
+        <testcase name="testCSRFProtectionIsRegisteredAsFilter" file="C:\de\sirs\tests\security\CSRFTest.php" line="141" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.073243"/>
+        <testcase name="testCSRFMiddlewareIsRegistered" file="C:\de\sirs\tests\security\CSRFTest.php" line="148" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.076581"/>
+        <testcase name="testSecurityHeadersMiddlewareIsRegistered" file="C:\de\sirs\tests\security\CSRFTest.php" line="155" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.072163"/>
+        <testcase name="testCSRFTokenCanBeValidated" file="C:\de\sirs\tests\security\CSRFTest.php" line="162" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.078075">
+          <error type="Error">Tests\Security\CSRFTest::testCSRFTokenCanBeValidated&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:166</error>
+        </testcase>
+        <testcase name="testCSRFProtectionForPOSTRequests" file="C:\de\sirs\tests\security\CSRFTest.php" line="172" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.086532">
+          <error type="ErrorException">Tests\Security\CSRFTest::testCSRFProtectionForPOSTRequests&#13;
+ErrorException: Undefined variable $routes
+&#13;
+C:\de\sirs\app\Config\Routes.php:10
+C:\de\sirs\vendor\codeigniter4\framework\system\Config\Factories.php:291
+C:\de\sirs\vendor\codeigniter4\framework\system\Config\Factories.php:217
+C:\de\sirs\vendor\codeigniter4\framework\system\Config\Factories.php:160
+C:\de\sirs\vendor\codeigniter4\framework\system\Config\Factories.php:189
+C:\de\sirs\vendor\codeigniter4\framework\system\Common.php:220
+C:\de\sirs\tests\security\CSRFTest.php:174</error>
+        </testcase>
+        <testcase name="testCSRFProtectionForPUTRequests" file="C:\de\sirs\tests\security\CSRFTest.php" line="179" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.078836"/>
+        <testcase name="testCSRFProtectionForDELETERequests" file="C:\de\sirs\tests\security\CSRFTest.php" line="186" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.066799"/>
+        <testcase name="testCSRFRedirectOnFailureInProduction" file="C:\de\sirs\tests\security\CSRFTest.php" line="193" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.075617"/>
+        <testcase name="testCSRFTokenFormat" file="C:\de\sirs\tests\security\CSRFTest.php" line="200" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.076000">
+          <error type="Error">Tests\Security\CSRFTest::testCSRFTokenFormat&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:204</error>
+        </testcase>
+        <testcase name="testCSRFProtectionAgainstReplayAttack" file="C:\de\sirs\tests\security\CSRFTest.php" line="211" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="1" time="0.081532"/>
+        <testcase name="testCSRFProtectionAgainstTokenFixation" file="C:\de\sirs\tests\security\CSRFTest.php" line="218" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.073016">
+          <error type="Error">Tests\Security\CSRFTest::testCSRFProtectionAgainstTokenFixation&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:224</error>
+        </testcase>
+        <testcase name="testCSRFCookieAttributes" file="C:\de\sirs\tests\security\CSRFTest.php" line="231" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="2" time="0.072928"/>
+        <testcase name="testCSRFProtectionIsEnabledByDefault" file="C:\de\sirs\tests\security\CSRFTest.php" line="239" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="4" time="0.074558"/>
+        <testcase name="testMultipleCSRFTokenGenerationsAreUnique" file="C:\de\sirs\tests\security\CSRFTest.php" line="249" class="Tests\Security\CSRFTest" classname="Tests.Security.CSRFTest" assertions="0" time="0.075491">
+          <error type="Error">Tests\Security\CSRFTest::testMultipleCSRFTokenGenerationsAreUnique&#13;
+Error: Call to undefined method CodeIgniter\Security\Security::getRandomBytes()
+&#13;
+C:\de\sirs\tests\security\CSRFTest.php:255</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Security\RBACBypassTest" file="C:\de\sirs\tests\security\RBACBypassTest.php" tests="5" assertions="0" errors="5" failures="0" skipped="0" time="2.533289">
+        <testcase name="testUserCannotAccessAdminRoute" file="C:\de\sirs\tests\security\RBACBypassTest.php" line="47" class="Tests\Security\RBACBypassTest" classname="Tests.Security.RBACBypassTest" assertions="0" time="0.510184">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\RBACBypassTest::testUserCannotAccessAdminRoute&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\RBACBypassTest.php:29
+C:\de\sirs\tests\security\RBACBypassTest.php:49</error>
+        </testcase>
+        <testcase name="testUserCannotElevatePrivilegesViaRequest" file="C:\de\sirs\tests\security\RBACBypassTest.php" line="56" class="Tests\Security\RBACBypassTest" classname="Tests.Security.RBACBypassTest" assertions="0" time="0.507035">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\RBACBypassTest::testUserCannotElevatePrivilegesViaRequest&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\RBACBypassTest.php:29
+C:\de\sirs\tests\security\RBACBypassTest.php:58</error>
+        </testcase>
+        <testcase name="testUserCannotAccessWithoutSpecificPermission" file="C:\de\sirs\tests\security\RBACBypassTest.php" line="71" class="Tests\Security\RBACBypassTest" classname="Tests.Security.RBACBypassTest" assertions="0" time="0.502097">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\RBACBypassTest::testUserCannotAccessWithoutSpecificPermission&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\RBACBypassTest.php:29
+C:\de\sirs\tests\security\RBACBypassTest.php:73</error>
+        </testcase>
+        <testcase name="testCannotBypassRBACViaDirectURLManipulation" file="C:\de\sirs\tests\security\RBACBypassTest.php" line="80" class="Tests\Security\RBACBypassTest" classname="Tests.Security.RBACBypassTest" assertions="0" time="0.506117">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\RBACBypassTest::testCannotBypassRBACViaDirectURLManipulation&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\RBACBypassTest.php:29
+C:\de\sirs\tests\security\RBACBypassTest.php:82</error>
+        </testcase>
+        <testcase name="testCannotBypassRBACViaHTTPMethodSpoofing" file="C:\de\sirs\tests\security\RBACBypassTest.php" line="89" class="Tests\Security\RBACBypassTest" classname="Tests.Security.RBACBypassTest" assertions="0" time="0.507856">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\RBACBypassTest::testCannotBypassRBACViaHTTPMethodSpoofing&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\RBACBypassTest.php:29
+C:\de\sirs\tests\security\RBACBypassTest.php:91</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Security\SQLInjectionTest" file="C:\de\sirs\tests\security\SQLInjectionTest.php" tests="12" assertions="0" errors="12" failures="0" skipped="0" time="1.737770">
+        <testcase name="testLoginSQLInjectionAttempt" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="32" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.515305">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testLoginSQLInjectionAttempt&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:34</error>
+        </testcase>
+        <testcase name="testLoginSQLInjectionInPassword" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="63" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.505953">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testLoginSQLInjectionInPassword&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:65</error>
+        </testcase>
+        <testcase name="testPatientSearchSQLInjection" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="86" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.019898">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testPatientSearchSQLInjection&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:88</error>
+        </testcase>
+        <testcase name="testPatientCreateSQLInjection" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="122" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.030140">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testPatientCreateSQLInjection&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:119
+C:\de\sirs\app\Services\Patient\PatientService.php:76
+C:\de\sirs\tests\security\SQLInjectionTest.php:131</error>
+        </testcase>
+        <testcase name="testEmailVerificationTokenSQLInjection" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="143" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.018300">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testEmailVerificationTokenSQLInjection&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_email_verifications
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:81
+C:\de\sirs\tests\security\SQLInjectionTest.php:153</error>
+        </testcase>
+        <testcase name="testPasswordResetTokenSQLInjection" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="159" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.021032">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testPasswordResetTokenSQLInjection&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_password_resets
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:119
+C:\de\sirs\tests\security\SQLInjectionTest.php:169</error>
+        </testcase>
+        <testcase name="testLoginEndpointSQLInjectionViaHTTP" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="175" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.510688">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testLoginEndpointSQLInjectionViaHTTP&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:177</error>
+        </testcase>
+        <testcase name="testPatientSearchEndpointSQLInjectionViaHTTP" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="195" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.026720">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testPatientSearchEndpointSQLInjectionViaHTTP&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:207</error>
+        </testcase>
+        <testcase name="testPatientUpdateSQLInjectionViaHTTP" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="224" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.024459">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testPatientUpdateSQLInjectionViaHTTP&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:236</error>
+        </testcase>
+        <testcase name="testNoSQLInjectionViaOrderBy" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="258" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.016640">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testNoSQLInjectionViaOrderBy&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1743
+C:\de\sirs\app\Services\Patient\PatientService.php:49
+C:\de\sirs\tests\security\SQLInjectionTest.php:262</error>
+        </testcase>
+        <testcase name="testNoSQLInjectionViaGenderFilter" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="268" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.023091">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testNoSQLInjectionViaGenderFilter&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:270</error>
+        </testcase>
+        <testcase name="testNoSQLInjectionViaPagination" file="C:\de\sirs\tests\security\SQLInjectionTest.php" line="295" class="Tests\Security\SQLInjectionTest" classname="Tests.Security.SQLInjectionTest" assertions="0" time="0.025543">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Security\SQLInjectionTest::testNoSQLInjectionViaPagination&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\security\SQLInjectionTest.php:298</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="ExampleSessionTest" file="C:\de\sirs\tests\session\ExampleSessionTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.002838">
+        <testcase name="testSessionSimple" file="C:\de\sirs\tests\session\ExampleSessionTest.php" line="10" class="ExampleSessionTest" classname="ExampleSessionTest" assertions="1" time="0.002838"/>
+      </testsuite>
+      <testsuite name="HealthTest" file="C:\de\sirs\tests\unit\HealthTest.php" tests="2" assertions="3" errors="0" failures="0" skipped="0" time="0.008025">
+        <testcase name="testIsDefinedAppPath" file="C:\de\sirs\tests\unit\HealthTest.php" line="12" class="HealthTest" classname="HealthTest" assertions="1" time="0.002863"/>
+        <testcase name="testBaseUrlHasBeenSet" file="C:\de\sirs\tests\unit\HealthTest.php" line="17" class="HealthTest" classname="HealthTest" assertions="2" time="0.005162"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Models\UserModelTest" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" tests="16" assertions="10" errors="11" failures="0" skipped="0" time="1.757368">
+        <testcase name="testInsertUserSuccess" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="25" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.144420">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testInsertUserSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:33</error>
+        </testcase>
+        <testcase name="testInsertGeneratesUUID" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="39" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.143431">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testInsertGeneratesUUID&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:41</error>
+        </testcase>
+        <testcase name="testValidationRequiresName" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="53" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.145796">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testValidationRequiresName&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:55</error>
+        </testcase>
+        <testcase name="testValidationRequiresValidEmail" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="66" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="1" time="0.128789"/>
+        <testcase name="testValidationRequiresMinPasswordLength" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="77" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.144982">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testValidationRequiresMinPasswordLength&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:79</error>
+        </testcase>
+        <testcase name="testFindUserById" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="88" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.146903">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testFindUserById&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:90</error>
+        </testcase>
+        <testcase name="testFindUserByEmail" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="103" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.142007">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testFindUserByEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:105</error>
+        </testcase>
+        <testcase name="testUpdateUser" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="117" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.139546">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testUpdateUser&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:119</error>
+        </testcase>
+        <testcase name="testSoftDelete" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="131" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.149416">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testSoftDelete&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:133</error>
+        </testcase>
+        <testcase name="testTimestampsAreSet" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="149" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.145057">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testTimestampsAreSet&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:151</error>
+        </testcase>
+        <testcase name="testAllowedFields" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="163" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="6" time="0.011468"/>
+        <testcase name="testReturnTypeIsObject" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="175" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="1" time="0.009091"/>
+        <testcase name="testTableName" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="180" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="1" time="0.006934"/>
+        <testcase name="testSoftDeletesEnabled" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="185" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="1" time="0.008443"/>
+        <testcase name="testFindAllUsers" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="190" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.140665">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testFindAllUsers&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:192</error>
+        </testcase>
+        <testcase name="testWhereClauseFiltering" file="C:\de\sirs\tests\unit\Models\UserModelTest.php" line="209" class="Tests\Unit\Models\UserModelTest" classname="Tests.Unit.Models.UserModelTest" assertions="0" time="0.150418">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Models\UserModelTest::testWhereClauseFiltering&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Models\UserModelTest.php:211</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\AuthServiceTest" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" tests="14" assertions="0" errors="14" failures="0" skipped="0" time="4.842358">
+        <testcase name="testLoginWithValidCredentials" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="34" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.509463">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testLoginWithValidCredentials&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:39</error>
+        </testcase>
+        <testcase name="testLoginWithInvalidPassword" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="56" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.515180">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testLoginWithInvalidPassword&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:60</error>
+        </testcase>
+        <testcase name="testLoginWithNonExistentEmail" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="72" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.022303">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testLoginWithNonExistentEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:34
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:74</error>
+        </testcase>
+        <testcase name="testLoginWithInactiveUser" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="79" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.505555">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testLoginWithInactiveUser&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:84</error>
+        </testcase>
+        <testcase name="testRegisterSuccess" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="96" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.027854">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testRegisterSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_roles
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:98</error>
+        </testcase>
+        <testcase name="testRegisterWithDuplicateEmail" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="116" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.518035">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testRegisterWithDuplicateEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:118</error>
+        </testcase>
+        <testcase name="testVerifyEmailSuccess" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="133" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.521462">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testVerifyEmailSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:135</error>
+        </testcase>
+        <testcase name="testVerifyEmailWithInvalidToken" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="156" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.020868">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testVerifyEmailWithInvalidToken&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_email_verifications
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:81
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:158</error>
+        </testcase>
+        <testcase name="testForgotPasswordSuccess" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="163" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.511842">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testForgotPasswordSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:165</error>
+        </testcase>
+        <testcase name="testForgotPasswordWithNonExistentEmail" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="177" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.022364">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testForgotPasswordWithNonExistentEmail&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:98
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:179</error>
+        </testcase>
+        <testcase name="testResetPasswordSuccess" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="184" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.518732">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testResetPasswordSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:186</error>
+        </testcase>
+        <testcase name="testResetPasswordWithInvalidToken" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="208" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.020901">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testResetPasswordWithInvalidToken&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_password_resets
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Auth\AuthService.php:119
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:210</error>
+        </testcase>
+        <testcase name="testHasPermission" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="215" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.587544">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testHasPermission&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:217</error>
+        </testcase>
+        <testcase name="testHasRole" file="C:\de\sirs\tests\unit\Services\AuthServiceTest.php" line="249" class="Tests\Unit\Services\AuthServiceTest" classname="Tests.Unit.Services.AuthServiceTest" assertions="0" time="0.540255">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\AuthServiceTest::testHasRole&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_users
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Rules.php:175
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\StrictRules\Rules.php:187
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:345
+C:\de\sirs\vendor\codeigniter4\framework\system\Validation\Validation.php:210
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:1615
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:868
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\AuthServiceTest.php:251</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\BillingServiceTest" file="C:\de\sirs\tests\unit\Services\BillingServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.087757">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\BillingServiceTest.php" line="17" class="Tests\Unit\Services\BillingServiceTest" classname="Tests.Unit.Services.BillingServiceTest" assertions="1" time="0.087757"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\DoctorServiceTest" file="C:\de\sirs\tests\unit\Services\DoctorServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.079728">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\DoctorServiceTest.php" line="17" class="Tests\Unit\Services\DoctorServiceTest" classname="Tests.Unit.Services.DoctorServiceTest" assertions="1" time="0.079728"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\LabServiceTest" file="C:\de\sirs\tests\unit\Services\LabServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.075233">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\LabServiceTest.php" line="17" class="Tests\Unit\Services\LabServiceTest" classname="Tests.Unit.Services.LabServiceTest" assertions="1" time="0.075233"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\MedicalRecordServiceTest" file="C:\de\sirs\tests\unit\Services\MedicalRecordServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.077371">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\MedicalRecordServiceTest.php" line="17" class="Tests\Unit\Services\MedicalRecordServiceTest" classname="Tests.Unit.Services.MedicalRecordServiceTest" assertions="1" time="0.077371"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\PatientServiceTest" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" tests="24" assertions="0" errors="24" failures="0" skipped="0" time="0.576188">
+        <testcase name="testGetAllReturnsPatients" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="47" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.022163">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetAllReturnsPatients&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:49</error>
+        </testcase>
+        <testcase name="testGetAllWithSearchFilter" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="59" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025730">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetAllWithSearchFilter&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:61</error>
+        </testcase>
+        <testcase name="testGetAllWithGenderFilter" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="77" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025554">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetAllWithGenderFilter&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:79</error>
+        </testcase>
+        <testcase name="testGetAllWithPagination" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="89" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.027833">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetAllWithPagination&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:92</error>
+        </testcase>
+        <testcase name="testGetByUuidReturnsPatient" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="102" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.028048">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetByUuidReturnsPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:104</error>
+        </testcase>
+        <testcase name="testGetByUuidReturnsNullForNonExistent" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="112" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025417">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetByUuidReturnsNullForNonExistent&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:70
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:114</error>
+        </testcase>
+        <testcase name="testCreatePatientSuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="119" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.023882">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testCreatePatientSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:119
+C:\de\sirs\app\Services\Patient\PatientService.php:76
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:128</error>
+        </testcase>
+        <testcase name="testCreatePatientGeneratesUniqueMRN" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="137" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025417">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testCreatePatientGeneratesUniqueMRN&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:119
+C:\de\sirs\app\Services\Patient\PatientService.php:76
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:139</error>
+        </testcase>
+        <testcase name="testUpdatePatientSuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="154" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025393">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testUpdatePatientSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:156</error>
+        </testcase>
+        <testcase name="testUpdateNonExistentPatientReturnsFalse" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="170" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.017342">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testUpdateNonExistentPatientReturnsFalse&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:91
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:172</error>
+        </testcase>
+        <testcase name="testDeletePatientSuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="179" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025194">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testDeletePatientSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:181</error>
+        </testcase>
+        <testcase name="testDeleteNonExistentPatientReturnsFalse" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="189" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.026007">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testDeleteNonExistentPatientReturnsFalse&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:104
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:191</error>
+        </testcase>
+        <testcase name="testGetAllergiesReturnsEmptyForNonExistentPatient" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="196" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.021448">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetAllergiesReturnsEmptyForNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:161
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:198</error>
+        </testcase>
+        <testcase name="testAddAllergySuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="204" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.024064">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testAddAllergySuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:206</error>
+        </testcase>
+        <testcase name="testAddAllergyToNonExistentPatientReturnsNull" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="219" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.024507">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testAddAllergyToNonExistentPatientReturnsNull&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:174
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:221</error>
+        </testcase>
+        <testcase name="testRemoveAllergySuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="229" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.020325">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testRemoveAllergySuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:231</error>
+        </testcase>
+        <testcase name="testRemoveNonExistentAllergyReturnsFalse" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="242" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025192">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testRemoveNonExistentAllergyReturnsFalse&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patient_allergies
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:195
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:244</error>
+        </testcase>
+        <testcase name="testGetChronicDiseasesReturnsEmptyForNonExistentPatient" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="249" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.024733">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetChronicDiseasesReturnsEmptyForNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:206
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:251</error>
+        </testcase>
+        <testcase name="testAddChronicDiseaseSuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="257" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.024525">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testAddChronicDiseaseSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:259</error>
+        </testcase>
+        <testcase name="testGetDocumentsReturnsEmptyForNonExistentPatient" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="272" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.021894">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetDocumentsReturnsEmptyForNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:240
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:274</error>
+        </testcase>
+        <testcase name="testAddDocumentSuccess" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="280" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.024800">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testAddDocumentSuccess&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:282</error>
+        </testcase>
+        <testcase name="testGetVisitsReturnsEmptyForNonExistentPatient" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="298" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.025580">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGetVisitsReturnsEmptyForNonExistentPatient&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:133
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:300</error>
+        </testcase>
+        <testcase name="testGenerateMRNFormat" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="307" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.018180">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testGenerateMRNFormat&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: Unable to prepare statement: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:1659
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:297
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:714
+C:\de\sirs\app\Services\Patient\PatientService.php:119
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:309</error>
+        </testcase>
+        <testcase name="testExportReturnsCsvString" file="C:\de\sirs\tests\unit\Services\PatientServiceTest.php" line="314" class="Tests\Unit\Services\PatientServiceTest" classname="Tests.Unit.Services.PatientServiceTest" assertions="0" time="0.022960">
+          <error type="CodeIgniter\Database\Exceptions\DatabaseException">Tests\Unit\Services\PatientServiceTest::testExportReturnsCsvString&#13;
+CodeIgniter\Database\Exceptions\DatabaseException: no such table: db_patients
+&#13;
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseConnection.php:863
+C:\de\sirs\vendor\codeigniter4\framework\system\Database\BaseBuilder.php:2355
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:357
+C:\de\sirs\vendor\codeigniter4\framework\system\BaseModel.php:899
+C:\de\sirs\vendor\codeigniter4\framework\system\Model.php:670
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:43
+C:\de\sirs\tests\unit\Services\PatientServiceTest.php:316</error>
+        </testcase>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\PaymentServiceTest" file="C:\de\sirs\tests\unit\Services\PaymentServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.075243">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\PaymentServiceTest.php" line="17" class="Tests\Unit\Services\PaymentServiceTest" classname="Tests.Unit.Services.PaymentServiceTest" assertions="1" time="0.075243"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\PharmacyServiceTest" file="C:\de\sirs\tests\unit\Services\PharmacyServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.083183">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\PharmacyServiceTest.php" line="17" class="Tests\Unit\Services\PharmacyServiceTest" classname="Tests.Unit.Services.PharmacyServiceTest" assertions="1" time="0.083183"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\PrescriptionServiceTest" file="C:\de\sirs\tests\unit\Services\PrescriptionServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.075596">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\PrescriptionServiceTest.php" line="17" class="Tests\Unit\Services\PrescriptionServiceTest" classname="Tests.Unit.Services.PrescriptionServiceTest" assertions="1" time="0.075596"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\QueueServiceTest" file="C:\de\sirs\tests\unit\Services\QueueServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.076336">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\QueueServiceTest.php" line="17" class="Tests\Unit\Services\QueueServiceTest" classname="Tests.Unit.Services.QueueServiceTest" assertions="1" time="0.076336"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\RegistrationServiceTest" file="C:\de\sirs\tests\unit\Services\RegistrationServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.080546">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\RegistrationServiceTest.php" line="17" class="Tests\Unit\Services\RegistrationServiceTest" classname="Tests.Unit.Services.RegistrationServiceTest" assertions="1" time="0.080546"/>
+      </testsuite>
+      <testsuite name="Tests\Unit\Services\ScheduleServiceTest" file="C:\de\sirs\tests\unit\Services\ScheduleServiceTest.php" tests="1" assertions="1" errors="0" failures="0" skipped="0" time="0.081115">
+        <testcase name="testCanBeInstantiated" file="C:\de\sirs\tests\unit\Services\ScheduleServiceTest.php" line="17" class="Tests\Unit\Services\ScheduleServiceTest" classname="Tests.Unit.Services.ScheduleServiceTest" assertions="1" time="0.081115"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>

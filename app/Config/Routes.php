@@ -10,16 +10,16 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'LandingController::index');
 $routes->get('/health', 'HealthController::check');
 
-// Auth routes
+// Auth routes (with throttling for brute force protection)
 $routes->get('/login', 'Auth\AuthController::loginForm');
-$routes->post('/login', 'Auth\AuthController::login');
+$routes->post('/login', 'Auth\AuthController::login', ['filter' => 'throttle:10,900']);
 $routes->get('/register', 'Auth\AuthController::registerForm');
-$routes->post('/register', 'Auth\AuthController::register');
+$routes->post('/register', 'Auth\AuthController::register', ['filter' => 'throttle:5,3600']);
 $routes->get('/logout', 'Auth\AuthController::logout');
 $routes->get('/forgot-password', 'Auth\AuthController::forgotPasswordForm');
-$routes->post('/forgot-password', 'Auth\AuthController::forgotPassword');
+$routes->post('/forgot-password', 'Auth\AuthController::forgotPassword', ['filter' => 'throttle:5,3600']);
 $routes->get('/reset-password/(:segment)', 'Auth\AuthController::resetPasswordForm/$1');
-$routes->post('/reset-password', 'Auth\AuthController::resetPassword');
+$routes->post('/reset-password', 'Auth\AuthController::resetPassword', ['filter' => 'throttle:5,3600']);
 $routes->get('/verify-email/(:segment)', 'Auth\AuthController::verifyEmail/$1');
 
 // Protected routes

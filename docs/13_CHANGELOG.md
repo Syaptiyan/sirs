@@ -75,6 +75,33 @@
 - Initial project setup
 - Documentation framework
 
+### Security - 2026-07-18
+- Paksa semua request aman (CSP, redirect HTTPS)
+- Proteksi Honeypot diaktifkan secara global
+- Proteksi CSRF diaktifkan secara global (berbasis session)
+- Filter security headers (X-Frame-Options, X-Content-Type-Options, dll.)
+- Filter InvalidChars untuk memblokir input berbahaya
+- Rate limiting pada route auth (login 10/900s, register/forgot/reset 5/3600s)
+- Filter data sensitif pada exception traces
+- Keamanan cookie: Secure, HttpOnly, SameSite=Strict
+- Handler cache Redis (fallback ke file)
+- Pembuatan kunci enkripsi AES-256 otomatis
+- Layanan UUID generation menggunakan random_bytes(16)
+
+### Fixed - 2026-07-18
+- Konfigurasi `Security` — tipe nullable untuk properti `$tokenRandomize`, `$regenerate`
+- Konfigurasi `Cache` — handler Redis yang benar + fallback file
+- Konfigurasi `Session` — menambahkan properti `?string $savePath = null`
+- Konfigurasi `Filters` — CSRF dipindah ke global `before` filter, semua filter keamanan diaktifkan
+- Konfigurasi `Exceptions` — diisi `$sensitiveDataInTrace`
+- Konfigurasi `Services` — mendaftarkan layanan `uuid`
+- `UserModel` — cast `$allowedFields` ke string untuk mencegah error tipe SQL
+- Migrasi `CreateUsersTable` — menghapus tabel `users` milik Shield terlebih dahulu (FK-safe) sebelum membuat skema aplikasi
+- Migrasi `CreateSettingsTable` — menggunakan `ifNotExists` untuk menghindari konflik dengan library Settings; `down()` no-op
+- Konflik migrasi database dengan library CodeIgniter Shield & Settings diselesaikan
+- Bootstrap database tes — menjalankan semua migrasi sekali sebelum suite PHPUnit (in-memory SQLite3)
+- Semua kelas tes menggunakan `$refresh = false` untuk mencegah kegagalan cascade regress
+
 ---
 
 ## [1.0.0] - 2024-XX-XX (Target)

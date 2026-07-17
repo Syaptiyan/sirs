@@ -13,6 +13,10 @@ class AuthServiceTest extends CIUnitTestCase
 {
     use DatabaseTestTrait;
 
+    protected $migrate = true;
+
+    protected $DBGroup = 'tests';
+    protected $refresh = false;
     private AuthService $authService;
     private UserModel $userModel;
     private RoleModel $roleModel;
